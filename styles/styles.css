@@ -1,0 +1,13 @@
+@import url('./common/common.css');
+@import url('./themes/themes.css');
+@import url('./components/component.css');
+
+.container {
+    color: var(--text);
+    background-color: var(--backgroundColor);
+}
+
+.accent {
+    background-color: var(--accentColor);
+    width: 120px;
+}

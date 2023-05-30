@@ -1,0 +1,53 @@
+.theme-switcher {
+    --width: 50px;
+    --height: calc(var(--width) / 2);
+}
+
+.toggle-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.theme-switcher input[type=checkbox] {
+    display: none;
+}
+
+.toggle-btn {
+    display: block;
+    height: var(--height);
+    width: var(--width);
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    border: solid 1px grey;
+    background-color: lightgray;
+    padding: 2px;
+}
+
+.toggle-btn.transition::before {
+    transition: 300ms;
+}
+
+.toggle-btn::before {
+    position: absolute;
+    content: '';
+    width: var(--height);
+    height:var(--height);
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.theme-switcher input[type=checkbox]:checked + .toggle-btn::before{
+    transform: translateX(var(--height));
+}
+
+.themes-container {
+    display: flex;
+    gap: 8px;
+}
+
+.themes-container .theme {
+    width: 40px;
+    height: 40px;
+}
